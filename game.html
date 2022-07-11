@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name = "viewport" content = "width = device-width ,initial-scale = 1.0">
+  <title>Burster</title>
+  <link rel="icon" type="image/x-icon" href="https://play-lh.googleusercontent.com/9thzvdBA7H9jo9_hku5Qi3kFNNkSJD2-RolGpDiJhqZFLDasbzmVlIAvmwM4FIKCkA=w480-h960-rw">
+	<link rel="stylesheet" href="gamestyle.css">
+	<script src="gamescript.js" defer></script>
+</head>
+<body>
+  <!-- <audio id="sounds" loop= "false" volume = "60">
+    <source src="BalloonBurst.wav" id="A" type="audio/wav">
+  </audio>
+ -->	<div id="BalloonBurster">
+    <div id="Game-info">
+      <div id="Pointsdiv">
+      Total Score <br><span id="Points">0</span>
+    </div>
+    <div id="life">
+      Lives <br><span id="liveinp"><input type="number" id="lives" value = "5" ></input></span>
+    </div>
+    <div id ="time">
+      Time <br><span id="timer"><input type="number" id="timeinp" value = "30" ></input></span>
+    </div>
+    <div id ="type">
+      <label> Shape <br><select id="shape">
+        <option value = "1">Balloon</option>
+        <option value = "2">Heart</option>
+        <option value = "3">Bird</option>
+        </select>
+      </label>
+    </div>
+    <div id ="speedsetter">
+      <label> Speed <br><select id="speed">
+        <option value = "2">Slow</option>
+        <option value = "1">Medium</option>
+        <option value = "0">Fast</option>
+        </select>
+      </label>
+    </div>
+    <div id="difficulty">
+      <label>Difficulty <br><select id="difinp">
+        <option value="10">Easy</option>
+    <option value="8">Medium</option>
+    <option value="6">Hard</option>
+      </select>
+    </label>
+    </div>
+    <button id="start">
+      Start New Game
+    </button>
+    <button id="stop">
+      Pause Game
+    </button>
+    <button id="end">
+      End Game
+    </button>
+  </div>
+    <div id="balloonwindow">
+    </div>
+  </div>
+</body>
+</html>

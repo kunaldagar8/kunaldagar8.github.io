@@ -1,0 +1,239 @@
+body{
+  /*text-align: center;*/
+  background-color: grey;
+}
+
+#userGuide{
+  /*text-align: center;*/
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#heading{
+  text-align: center;
+}
+#boxes{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.box{
+  padding: 30px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  border-radius: 10% 10% 10% 10%;
+}
+
+.lbl{
+  display: flex;
+  flex-direction: row;
+  color : grey;
+}
+.pointer{
+  /*color: black;*/
+  font-size: 20px;
+  width: 2rem;
+  margin: 20px 0 5px 0;
+  padding: 20px 0 10px 0;
+  text-align: center;
+
+}
+.inf{
+  color: black;
+  width: 8rem;
+  margin : 10px 20px 5px 30px;
+  padding: 20px 10px 10px 10px;
+  text-align: center;
+  border-radius: 10% 10% 10% 10%;
+}
+#list{
+  font-size: 25px;
+}
+li{
+  position: relative;
+}
+#Ptdiv{
+  /*margin-top: 30px;*/
+  /*color: black;
+  width: 8rem;
+  margin : 5px 20px 5px 30px;
+  padding: 5px 10px 10px 10px;
+  text-align: center;*/
+  background-color: #4B878BFF;/*
+  border-radius: 10% 10% 10% 10%;*/
+}
+/*#PtInf:before{
+  background-color: white;
+  width: 2rem;
+}*/
+#PtInf{
+  font-family: 'Courier New', monospace;
+  color: black;
+  width: 8rem;
+  background-color:grey;
+  margin : 5px 20px 5px 30px;
+  padding: 5px 10px 10px 10px;
+  border-radius: 10% 10% 10% 10%;
+}
+#PtInf:before{
+  position: absolute;
+  top: -50px;
+  right: 0px;
+  width: 100px;
+  height: 100px;
+  content: '';
+  border-radius: 50%;
+  background-color: inherit;
+}
+#life{
+  /*color: black;
+  width: 8rem;
+  margin : 5px 20px 5px 30px;
+  padding: 5px 10px 5px 10px;
+  text-align: center;*/
+  background-color: #5F4B8BFF;
+  /*border-radius: 10% 10% 10% 10%;*/
+}
+#life input{
+  background-color: #5F4B8BFF;
+}
+#time{
+  /*color: black;
+  width: 8rem;
+  margin : 5px 20px 5px 30px;
+  padding: 5px 10px 5px 10px;
+  text-align: center;*/
+  background-color: #B1624EFF;
+  /*border-radius: 10% 10% 10% 10%;*/
+}
+#time input{
+  background-color: #B1624EFF;
+}
+
+#btn{
+  /*width: 15rem;*/
+  /*background-color: black;*/
+  height: 50px;
+  text-align: center;
+}
+button{
+  padding: 30px;
+  font-size: 40px;
+  color: grey;
+  background-color: black;
+  border-radius: 50% 50% 50% 50%;
+  margin: 10px;
+}
+#type{
+  /*color: black;
+  width: 8rem;
+  margin : 5px 20px 5px 30px;
+  padding: 5px 10px 5px 10px;
+  text-align: center;*/
+  background-color: #5B84B1FF;
+  /*border-radius: 10% 10% 10% 10%;*/
+}
+
+#type select{
+  background-color: #5B84B1FF;
+}
+
+#speedsetter{
+  /*color: black;
+  width: 8rem;
+  margin : 5px 20px 5px 30px;
+  padding: 5px 10px 5px 10px;
+  text-align: center;*/
+  background-color:#42EADDFF;
+  /*border-radius: 10% 10% 10% 10%;*/
+}
+
+#speedsetter select{
+  background-color:#42EADDFF;
+}
+
+#difficulty{
+  /*color: black;
+  width: 8rem;
+  margin : 5px 20px 5px 30px;
+  padding: 5px 10px 5px 10px;
+  text-align: center;*/
+  background-color:#CBCE91FF;
+  /*border-radius: 10% 10% 10% 10%;*/
+}
+
+#difficulty select{
+  background-color:#CBCE91FF;
+}
+
+select{
+  padding-top: 5px;
+  margin-top: 0;
+  padding-bottom: 5px;
+  font-size: 15px;
+  text-align: center;
+  width: 7rem;
+  border:0px;
+  outline:0px;
+}
+
+input{
+  padding-top: 5px;
+  margin-top: 0;
+  padding-bottom: 5px;
+  font-size: 15px;
+  text-align: center;
+  width: 6.5rem;
+}
+.btn{
+  color: black;
+  width: 12rem;
+  margin : 20px 20px 25px 30px;
+  padding: 15px;
+  font-size: 20px;
+  text-align: center;
+  background-color: grey;
+  border-radius: 50% 50% 50% 50%;
+}
+/*#box2{
+  background-color: #F5DEB3;
+}*/
+/*#start{
+  color: black;
+  width: 12rem;
+  margin : 5px 20px 5px 30px;
+  padding: 15px;
+  font-size: 20px;
+  text-align: center;
+  background-color: grey;
+  border-radius: 50% 50% 50% 50%;
+}
+
+#stop{
+  color: black;
+  width: 12rem;
+  margin : 5px 20px 5px 30px;
+  padding: 15px;
+  font-size: 20px;
+  text-align: center;
+  background-color: grey;
+  border-radius: 50% 50% 50% 50%;
+}
+
+#end{
+  color: black;
+  width: 12rem;
+  margin : 5px 20px 5px 30px;
+  padding: 15px;
+  font-size: 20px;
+  text-align: center;
+  background-color: grey;
+  border-radius: 50% 50% 50% 50%;
+}
+*/
+
+
