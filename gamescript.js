@@ -4,6 +4,7 @@ var balloonimg = ["url('./Images/Balloons/b1.svg')","url('./Images/Balloons/b2.s
 var bonusimg = ["url('./Images/bonus/1.svg')","url('./Images/bonus/2.svg')","url('./Images/bonus/3.svg')","url('./Images/bonus/4.svg')","url('./Images/bonus/5.svg')","url('./Images/bonus/6.svg')",]
 var birdimg = ["url('./Images/Birds/1.svg')","url('./Images/Birds/2.svg')","url('./Images/Birds/3.svg')","url('./Images/Birds/4.svg')","url('./Images/Birds/5.svg')","url('./Images/Birds/6.svg')","url('./Images/Birds/7.svg')","url('./Images/Birds/8.svg')","url('./Images/Birds/9.svg')",]
 var w1 = document.getElementById("Game-info").offsetWidth;
+var h = window.innerHeight;
 var w = document.getElementById("balloonwindow").offsetWidth-w1-100;
 
 var lives;
@@ -18,6 +19,9 @@ var life = document.getElementById("lives");
 
 
 function BalloonBurster(){
+  this.endbutton = null;
+  this.pausebutton = null;
+  this.startbutton = null;
   this.state = false;// to check if the game is paused or is in continuity
   this.Points = 0;// to count the balloons bursted
   this.update = null;// to store the setinterval of upadting the bottom
@@ -87,9 +91,6 @@ function BalloonBurster(){
       bonus.onclick = function(){
         thus.removeBonus(bonus);
       }
-      // bonus.addEventListener('click',()=>{
-      //   this.removeBonus(bonus);
-      // });
 
       var balloonwindow=document.getElementById('balloonwindow');
       balloonwindow.appendChild(bonus);
@@ -589,35 +590,39 @@ function BalloonBurster(){
     this.difficulty=sel.value;
 
   };
+  this.startbutton = document.getElementById("start");//start the game when clicked on it
 
+  this.startbutton.addEventListener('click',()=>{
 
-}
+  this.pausebutton.innerHTML=`Pause Game`;
+  this.state=true;
+  this.end();
+  this.begin();
 
-var a = new BalloonBurster();
+});
+  this.pausebutton = document.getElementById("stop");//pauses the game when clicked on it
+this.endbutton = document.getElementById("end");// ends the game when clicked on it
 
-var pausebutton = document.getElementById("stop");//pauses the game when clicked on it
-var endbutton = document.getElementById("end");// ends the game when clicked on it
+this.endbutton.addEventListener('click',()=>{
 
-endbutton.addEventListener('click',()=>{
-
-  a.end();
-  pausebutton.innerHTML=`Pause Game`;
-  a.state=true;
+  this.end();
+  this.pausebutton.innerHTML=`Pause Game`;
+  this.state=true;
   location. href = "game.html";
-//   document.location.reload(true);
+  // document.location.reload(true);
 
 });
 
 
-pausebutton.addEventListener('click',()=>{
+this.pausebutton.addEventListener('click',()=>{
 
   // console.log("yes");
-  if(a.state==false){
+  if(this.state==false){
 
 
-    pausebutton.innerHTML=`Pause Game`;
-    a.state=true;
-    a.resume();
+    this.pausebutton.innerHTML=`Pause Game`;
+    this.state=true;
+    this.resume();
 
   }else{
 
@@ -627,23 +632,19 @@ pausebutton.addEventListener('click',()=>{
       }
     });
 
-    pausebutton.innerHTML=`Resume Game`;
-    a.state=false;
-    a.pause();
+    this.pausebutton.innerHTML=`Resume Game`;
+    this.state=false;
+    this.pause();
 
   }
 });
 
+
+}
+
+var a = new BalloonBurster();
+
+
 window.onload = (event) => {
   alert('Before starting new game please enter the details and switch to full screen')
 };
-var startbutton = document.getElementById("start");//start the game when clicked on it
-
-startbutton.addEventListener('click',()=>{
-
-  pausebutton.innerHTML=`Pause Game`;
-  a.state=true;
-  a.end();
-  a.begin();
-
-});
