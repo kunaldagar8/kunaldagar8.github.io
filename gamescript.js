@@ -603,7 +603,8 @@ endbutton.addEventListener('click',()=>{
   a.end();
   pausebutton.innerHTML=`Pause Game`;
   a.state=true;
-  document.location.reload(true);
+  location. href = "game.html";
+//   document.location.reload(true);
 
 });
 
