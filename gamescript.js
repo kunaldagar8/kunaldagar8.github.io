@@ -5,7 +5,7 @@ var bonusimg = ["url('./Images/bonus/1.svg')","url('./Images/bonus/2.svg')","url
 var birdimg = ["url('./Images/Birds/1.svg')","url('./Images/Birds/2.svg')","url('./Images/Birds/3.svg')","url('./Images/Birds/4.svg')","url('./Images/Birds/5.svg')","url('./Images/Birds/6.svg')","url('./Images/Birds/7.svg')","url('./Images/Birds/8.svg')","url('./Images/Birds/9.svg')",]
 var w1 = document.getElementById("Game-info").offsetWidth;
 var h = window.innerHeight;
-var w = document.getElementById("balloonwindow").offsetWidth-w1-100;
+var w = document.getElementById("balloonwindow").offsetWidth-300;
 
 var lives;
 var inlives;
@@ -82,7 +82,7 @@ function BalloonBurster(){
       bonus.classList.add('bonus');
       bonus.classList.add('object');
 
-      bonus.style.left = 30+w1+Math.floor(Math.random() * w)+'px';
+      bonus.style.left = w1+Math.floor(Math.random() *w)+'px';
       bonus.style.bottom = '500px';
 
       var idx = Math.floor(Math.random() * 6);
@@ -108,7 +108,7 @@ function BalloonBurster(){
       bomb.classList.add('bomb');
       bomb.classList.add('object');
 
-      bomb.style.left = 30+ w1+Math.floor(Math.random() * w)+'px';
+      bomb.style.left = w1+Math.floor(Math.random() * w)+'px';
       bomb.style.bottom = '500px';
 
       bomb.style.backgroundImage = "url('./Images/bomb.svg')";
@@ -131,7 +131,7 @@ function BalloonBurster(){
     balloon.classList.add('balloon');
     balloon.classList.add('object');
 
-    balloon.style.left =30+ w1+Math.floor(Math.random() * w)+'px';
+    balloon.style.left = w1+Math.floor(Math.random() * w)+'px';
     balloon.style.bottom = '500px';
 
     var idx = Math.floor(Math.random() * 4);
