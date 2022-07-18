@@ -3,7 +3,7 @@ var heartimg = ["url('./Images/Hearts/1.svg')","url('./Images/Hearts/2.svg')","u
 var balloonimg = ["url('./Images/Balloons/b1.svg')","url('./Images/Balloons/b2.svg')","url('./Images/Balloons/b3.svg')","url('./Images/Balloons/b4.svg')"]
 var bonusimg = ["url('./Images/bonus/1.svg')","url('./Images/bonus/2.svg')","url('./Images/bonus/3.svg')","url('./Images/bonus/4.svg')","url('./Images/bonus/5.svg')","url('./Images/bonus/6.svg')",]
 var birdimg = ["url('./Images/Birds/1.svg')","url('./Images/Birds/2.svg')","url('./Images/Birds/3.svg')","url('./Images/Birds/4.svg')","url('./Images/Birds/5.svg')","url('./Images/Birds/6.svg')","url('./Images/Birds/7.svg')","url('./Images/Birds/8.svg')","url('./Images/Birds/9.svg')",]
-// var w1 = document.getElementById("Game-info").offsetWidth;
+// var this.w1 = document.getElementById("Game-info").offsetWidth;
 // var h = window.innerHeight;
 // var w = document.getElementById("balloonwindow").offsetWidth-300;
 
@@ -19,9 +19,9 @@ var life = document.getElementById("lives");
 
 
 function BalloonBurster(){
-  var w1 = document.getElementById("Game-info").offsetWidth;
-  var h = window.innerHeight;
-  var w = document.getElementById("balloonwindow").offsetWidth-300;
+  this.w1 = document.getElementById("Game-info").offsetWidth;
+  this.h = window.innerHeight;
+  this.w = document.getElementById("balloonwindow").offsetWidth-300;
   this.endbutton = null;
   this.pausebutton = null;
   this.startbutton = null;
@@ -85,7 +85,7 @@ function BalloonBurster(){
       bonus.classList.add('bonus');
       bonus.classList.add('object');
 
-      bonus.style.left = w1+Math.floor(Math.random() *w)+'px';
+      bonus.style.left = this.w1+Math.floor(Math.random() *this.w)+'px';
       bonus.style.bottom = '500px';
 
       var idx = Math.floor(Math.random() * 6);
@@ -111,7 +111,7 @@ function BalloonBurster(){
       bomb.classList.add('bomb');
       bomb.classList.add('object');
 
-      bomb.style.left = w1+Math.floor(Math.random() * w)+'px';
+      bomb.style.left = this.w1+Math.floor(Math.random() * this.w)+'px';
       bomb.style.bottom = '500px';
 
       bomb.style.backgroundImage = "url('./Images/bomb.svg')";
@@ -134,7 +134,7 @@ function BalloonBurster(){
     balloon.classList.add('balloon');
     balloon.classList.add('object');
 
-    balloon.style.left = w1+Math.floor(Math.random() * w)+'px';
+    balloon.style.left = this.w1+Math.floor(Math.random() * this.w)+'px';
     balloon.style.bottom = '500px';
 
     var idx = Math.floor(Math.random() * 4);
@@ -159,7 +159,7 @@ function BalloonBurster(){
     heart.classList.add('heart');
     heart.classList.add('object');
 
-    heart.style.left = 30+ w1+Math.floor(Math.random() * w)+'px';
+    heart.style.left = 30+ this.w1+Math.floor(Math.random() * this.w)+'px';
     heart.style.bottom = '500px';
 
     var idx = Math.floor(Math.random() * 14);
@@ -189,7 +189,7 @@ function BalloonBurster(){
 
     bird.append(neck);
 
-    bird.style.left = 30+ w1+Math.floor(Math.random() * w)+'px';
+    bird.style.left = 30+ this.w1+Math.floor(Math.random() * this.w)+'px';
     bird.style.bottom = '500px';
 
     var idx = Math.floor(Math.random() * 9);
@@ -214,7 +214,7 @@ function BalloonBurster(){
       balloon.classList.add('balloon');
       balloon.classList.add('object');
 
-      balloon.style.left =30+ w1+Math.floor(Math.random() * w)+'px';
+      balloon.style.left =30+ this.w1+Math.floor(Math.random() * this.w)+'px';
       balloon.style.bottom = '500px';
 
       var idx = Math.floor(Math.random() * 4);
@@ -250,7 +250,7 @@ function BalloonBurster(){
       heart.classList.add('heart');
       heart.classList.add('object');
 
-      heart.style.left = 30+ w1+Math.floor(Math.random() * w)+'px';
+      heart.style.left = 30+ this.w1+Math.floor(Math.random() * this.w)+'px';
       heart.style.bottom = '500px';
 
       var idx = Math.floor(Math.random() * 14);
@@ -289,7 +289,7 @@ function BalloonBurster(){
 
       bird.append(neck);
 
-      bird.style.left = 30+ w1+Math.floor(Math.random() * w)+'px';
+      bird.style.left = 30+ this.w1+Math.floor(Math.random() * this.w)+'px';
       bird.style.bottom = '500px';
 
       var idx = Math.floor(Math.random() * 9);
@@ -644,6 +644,7 @@ this.pausebutton.addEventListener('click',()=>{
 
 
 }
+
 
 
 window.onload = (event) => {
