@@ -645,9 +645,8 @@ this.pausebutton.addEventListener('click',()=>{
 
 }
 
-var a = new BalloonBurster();
-
 
 window.onload = (event) => {
+  var a = new BalloonBurster();
   alert('Before starting new game please enter the details and switch to full screen')
 };
